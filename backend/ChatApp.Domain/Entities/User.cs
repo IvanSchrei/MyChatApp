@@ -1,10 +1,19 @@
+namespace ChatApp.Domain.Entities;
 public class User
 {
     public Guid Id { get; private set; }
     public string Username { get; private set; }
 
-    public User()
+    public ICollection<ConversationParticipant> Conversations { get; private set; } = [];
+
+    public User(Guid id, string username)
     {
-        this.Username = "default";
+        Id = id;
+        Username = username;
+    }
+
+    private User()
+    {
+        
     }
 }

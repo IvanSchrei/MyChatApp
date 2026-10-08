@@ -1,0 +1,1 @@
+namespace ChatApp.Application.Messages.SendMessage;
